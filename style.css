@@ -1,0 +1,143 @@
+body {
+  background-color: #121212;
+  padding: 0px 20px;
+}
+
+p {
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  margin: 0px 10px 2px 0px;
+  filter: invert(100);
+}
+
+.title {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.data {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  flex: 1;
+  max-width: 30%;
+}
+
+.lister {
+  flex: 1;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: #121212;
+  border-radius: 5px;
+  max-height: 70vh;
+  max-width: 30%;
+}
+
+.lister::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+.lister::-webkit-scrollbar-track {
+  background-color: #121212;
+}
+
+.lister::-webkit-scrollbar-thumb {
+  /*background-color: transparent;*/
+  background-color: rgba(202, 200, 200, 0.3);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.lister:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(202, 200, 200, 0.3);
+}
+
+#logList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#logList li {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px 0px 15px 0px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.outerbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rank {
+  margin: 0px 5px;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  align-items: center;
+  flex: 4;
+  text-align: center;
+  font-size: 1em;
+}
+
+.datetime {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.datetimeval {
+  color: rgba(255, 255, 255, 0.407);
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+  .data {
+    flex-direction: column;
+  }
+  .chart {
+    max-width: 100%;
+  }
+  .lister {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    overflow-y: auto;
+  }
+}
