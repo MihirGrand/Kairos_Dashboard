@@ -51,9 +51,10 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 });
 
 async function fetchLogs() {
-  const response = await fetch(
-    `https://kairosapi.vercel.app/get_logs?token=${process.env.GRAND_API_PASS}`
-  );
+  /*const response = await fetch(
+    `https://kairosapi.vercel.app/get_logs?token=${process.env.NEXT_PUBLIC_GRAND_API_PASS}`
+  );*/
+  const response = await fetch("/api/getLogs");
   const logs = await response.json();
   const logList = document.getElementById("logList");
   logList.innerHTML = "";
